@@ -6,6 +6,7 @@ const NavBar = () => (
     <nav>
         <NavLink className="home-link" to="/">React Music Browser</NavLink>
         <NavLink to="/about">About</NavLink>
+        <NavLink to='/artists'>Artists</NavLink>
     </nav>
 );
 
