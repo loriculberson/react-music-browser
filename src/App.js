@@ -20,9 +20,11 @@ class App extends Component {
 
   async componentDidMount() {
     const res = await axios.get('/artists.json');
-    this.setState({
-      artists: res.data
-    });
+    // setTimeout(() => {
+      this.setState({
+        artists: res.data
+      });
+    // }, 3000);
   }
 
   render() {
