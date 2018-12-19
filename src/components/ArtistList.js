@@ -12,8 +12,8 @@ const ArtistList = ({ match, artists}) => {
   )
 
   const processAlbum = (props) => {
-    console.log(`props`, props)
-    console.log(`artists`, artists)
+    // console.log(`props`, props)
+    // console.log(`artists`, artists)
     const artist = artists.find(artist => artist.id === Number(props.match.params.id))
     return (
       artist ?
