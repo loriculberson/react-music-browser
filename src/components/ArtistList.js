@@ -17,7 +17,7 @@ const ArtistList = ({ match, artists}) => {
     const artist = artists.find(artist => artist.id === Number(props.match.params.id))
     return (
       artist ?
-        <AlbumList {...props} albums={artist.albums}/> : 
+        <AlbumList {...props} artist={artist} albums={artist.albums}/> : 
         <h2>Loading...</h2>
     );
   }

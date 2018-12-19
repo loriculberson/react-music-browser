@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const AlbumList = ({ albums }) => {
+const AlbumList = ({ artist, albums }) => {
   const records = albums ? (
     albums.map(album => 
       <li key={album.id}>
@@ -12,7 +12,7 @@ const AlbumList = ({ albums }) => {
 
   return (
     <div>
-      Artist
+      {artist.name}'s Albums:
         {records}
     </div>
   );
