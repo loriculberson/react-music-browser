@@ -11,12 +11,9 @@ import ArtistList from './components/ArtistList';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      artists: []
-    };
-  }
+ state = {
+    artists: []
+};
 
   async componentDidMount() {
     const res = await axios.get('/artists.json');
@@ -25,9 +22,11 @@ class App extends Component {
         artists: res.data
       });
     // }, 3000);
+    console.log(`data retrieved`);
   }
 
   render() {
+    console.log(`render was run`);
     return (
       <Router>
         <section style={ {width: '100%'} }>

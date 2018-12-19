@@ -1,13 +1,9 @@
 import React from 'react';
 
 
-const AlbumList = ({ match, artists }) => {
-  // console.log(`Artists`, artists)
-  const artist = artists.find(artist => artist.id === Number(match.params.id));
-  // console.log(`Artist`, artist);
-
-  const albums = artist ? (
-    artist.albums.map(album => 
+const AlbumList = ({ albums }) => {
+  const records = albums ? (
+    albums.map(album => 
       <li key={album.id}>
         {album.title}
       </li>
@@ -17,7 +13,7 @@ const AlbumList = ({ match, artists }) => {
   return (
     <div>
       Artist
-        {albums}
+        {records}
     </div>
   );
 };
