@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import AlbumList from './AlbumList';
-import './Artists.css';
 
 const ArtistList = ({ match, artists}) => {
   console.log(`artistList match`, match)
@@ -25,17 +24,19 @@ const ArtistList = ({ match, artists}) => {
   }
   
   return (
-    <section>
-      <ul>
-        {list}
-      </ul>
-      <section>
-        <Route
-          path='/artists/:id'
-          render={processAlbum}
-        />
+    <main>
+      <section className="artists">
+        <h4>Artists</h4>
+        <ul>
+          {list}
+        </ul>
       </section>
-    </section>
+      <Route
+        path='/artists/:id'
+        render={processAlbum}
+      />
+
+    </main>
   );
 };
 

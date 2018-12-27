@@ -6,10 +6,13 @@ const albumSongs = songs.map(song =>
   <li key={song.id}>{song.title} | {song.length} | {song.rating}</li>  
 )
   return (
-    <div>
-      <h2>Song List</h2>
-      {albumSongs}
-    </div>
+    <section className="songs">
+      <h4>Song List</h4>
+      
+        <ul>
+          {albumSongs}
+        </ul>
+    </section>
   );
 };
 

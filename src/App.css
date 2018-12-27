@@ -1,10 +1,10 @@
 main {
-  width: 80%;
   margin: auto;
   display: grid;
-  grid-template-columns: 20% 20% 60%;
+  grid-template-columns: 20% 30% 50%;
   justify-items: stretch;
 }
+
 
 @media all and (max-width: 1200px) {
   main {
@@ -16,8 +16,13 @@ main a {
   text-decoration: none;
 }
 
-main a:focus {
-  color: #40a060;
+main li {
+  list-style: none;
+}
+
+main .active {
+  font-weight: bold;
+  color: teal;
 }
 
 .list h1 {
@@ -25,10 +30,6 @@ main a:focus {
   font-size: 1.5em;
 }
 
-.list ul {
-  list-style: none;
-  padding-left: 30%;
-}
 
 .list table {
   border-collapse: collapse;

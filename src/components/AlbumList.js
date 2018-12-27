@@ -28,16 +28,20 @@ const AlbumList = ({ artist, albums, match }) => {
   }
 
   return (
-    <section>
-      {artist.name}'s Albums:
-        {records}
+    <React.Fragment>
+      <section className="albums">
+        <h4> {artist.name}'s Albums:</h4>
+        <ul>
+          {records}
+        </ul>
+      </section>
       <section>
         <Route 
           path={`${match.path}/albums/:albumId`}
           render={songList}
-        />
+          />
       </section>
-    </section>
+    </React.Fragment>
   );
 };
 
