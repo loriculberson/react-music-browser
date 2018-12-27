@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import AlbumList from './AlbumList';
+import './Artists.css';
 
 const ArtistList = ({ match, artists}) => {
+  console.log(`artistList match`, match)
   const list = artists.map(artist => 
       artist.id ? 
       <li key={artist.id}>
@@ -12,7 +14,7 @@ const ArtistList = ({ match, artists}) => {
   )
 
   const processAlbum = (props) => {
-    // console.log(`props`, props)
+    console.log(`process props.match`, props.match)
     // console.log(`artists`, artists)
     const artist = artists.find(artist => artist.id === Number(props.match.params.id))
     return (
