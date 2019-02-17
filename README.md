@@ -1,3 +1,9 @@
 # Music Browser
 
-This repository contains starter code for creating a Music Browser app using React Router and nested, parameterized routes.
+This SPA displays artists, albums and songs. 
+
+**Skills:**
+- React router
+- Dynamic routes
+- passing data into components
+
